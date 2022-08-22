@@ -1,0 +1,8 @@
+fb9e989482ec94e626f8f927a101a448 *DESCRIPTION
+43d1eec4a04ecfd010c28c5ad802c1da *NAMESPACE
+bac7f068281fefdae0d0141547b4d9ed *R/get.bound.R
+60b0f09a89dff478896db7ae2f7b1fc1 *R/get.kappa.max.R
+c40ce7c978144f37f82994a1f7032f62 *R/mFDP.adjust.R
+5c48aed821d7d058c0f535151e1fe7c8 *man/get.bound.Rd
+f9f21fbac80c8378591102ca3d7bfdd6 *man/get.kappa.max.Rd
+6c7caf8beca43e87aa4ea541d32a4893 *man/mFDP.adjust.Rd
