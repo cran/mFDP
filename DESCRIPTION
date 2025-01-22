@@ -1,8 +1,8 @@
 Package: mFDP
 Type: Package
 Title: Control of the Median of the FDP
-Version: 0.2.0
-Date: 2025-01-14
+Version: 0.2.1
+Date: 2025-01-22
 Authors@R: person(given="Jesse", family="Hemerik", email="hemerik@ese.eur.nl", role=c("aut", "cre"))
 Maintainer: Jesse Hemerik <hemerik@ese.eur.nl>
 Description: Methods for controlling the median of the false discovery proportion (mFDP).
@@ -11,7 +11,7 @@ Description: Methods for controlling the median of the false discovery proportio
 License: GNU General Public License
 Imports: methods
 NeedsCompilation: no
-Packaged: 2025-01-14 14:56:52 UTC; jessu
+Packaged: 2025-01-22 15:40:00 UTC; jessu
 Author: Jesse Hemerik [aut, cre]
 Repository: CRAN
-Date/Publication: 2025-01-14 16:50:02 UTC
+Date/Publication: 2025-01-22 16:00:02 UTC
