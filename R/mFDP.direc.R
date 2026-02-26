@@ -4,9 +4,9 @@ mFDP.direc <- function(Ts, delta=0, gamma=0.05){
   
   
   Ts_above_delta = Ts[which(Ts>delta)]
-  Ts_below_minusdelta = Ts[ which(Ts < -delta) ]
+  Ts_below_delta = Ts[ which(Ts < delta) ]
   JumpsR = Ts_above_delta - delta
-  JumpsRmin = -delta - Ts_below_minusdelta 
+  JumpsRmin = delta - Ts_below_delta 
   Jumps = c(JumpsR,JumpsRmin) #all t>=0 where FDP_tilde has a jump
   Jumps_so = sort(Jumps)     #sorted jumping points
   nJumps = length(Jumps_so)
@@ -16,14 +16,15 @@ mFDP.direc <- function(Ts, delta=0, gamma=0.05){
   for(i in 1:nJumps){
     t= Jumps_so[i]
     R_t = sum(Ts_above_delta > delta+t)
-    bound_t = sum(Ts_below_minusdelta < -delta-t)
+    bound_t = sum(Ts_below_delta < delta-t)
 
     FDPtilde_Jumps[i] = bound_t / max(R_t,1)  #compute FDPtilde at its jumping points
   }
   
-  if(min(FDPtilde_Jumps)>gamma) rejectsome = FALSE   else   rejectsome = TRUE
+  #Check whether there are potentially rejections
+  if(min(FDPtilde_Jumps)>gamma) mayreject = FALSE   else   mayreject = TRUE 
   
-  if(rejectsome){
+  if(mayreject){
     
     if(max(FDPtilde_Jumps) > gamma ){
       index_s = max(which(FDPtilde_Jumps>gamma)) 
